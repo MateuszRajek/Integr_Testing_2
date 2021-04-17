@@ -3,10 +3,10 @@ import { songsList as sl, songsFavNotFav } from './songs'
 import './App.css';
 
 function App({songsList = sl}) {
-const [updatedSongsList, updateSongsList] = useState(songsList)
+const [displayedSongsList, updateSongsList] = useState(songsList)
 
 const toggleSongFavStatus = clickedIndex => {
-  const editedSongsList = [...updatedSongsList]
+  const editedSongsList = [...displayedSongsList]
   editedSongsList[clickedIndex].isFav = !editedSongsList[clickedIndex].isFav
   updateSongsList(editedSongsList)
 }
@@ -16,7 +16,7 @@ const toggleSongFavStatus = clickedIndex => {
       <div className='container'>
         <h1>Songs List</h1>
         <div className='songs-wrapper'>
-          {updatedSongsList.map((song, index) => {
+          {displayedSongsList.map((song, index) => {
             return(
               <div 
               className='card' 
