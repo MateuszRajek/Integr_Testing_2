@@ -1,6 +1,19 @@
-# Getting Started with Create React App
+# Display Songs Playlist and marking songs as favourite
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+After passing to component songs list that has fields:
+
+```javascript
+{
+  name(h2);
+  author(p);
+  isFav;
+}
+```
+
+Display them as children of div element/
+Each element must have a button, that will set isFav as true or false.
+
+If element's param isFav === true it's button must be 'gold' backgroung color ("btn--fav" class)
 
 ## Available Scripts
 
